@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  /* background: url(Images/bg.jpg); */
+  background-color: green;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: aliceblue;
+  padding: 20px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+header .logo {
+  font-size: 30px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin: 10px;
+}
+
+nav a {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin: 15px;
+  padding: 8px;
+  color: #111;
+  font-weight: 500;
+  border-bottom: solid transparent 3px;
+  transition: 0.3s ease;
+}
+nav a:hover {
+  border-bottom: solid green 3px;
+  color: green;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: green;
+  color: #fff;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: 600;
+  text-align: center;
+}
+#chek {
+  display: none;
+}
+#chek:checked ~ nav {
+  left: 0;
+  opacity: 1;
+}
+
+label {
+  font-size: 35px;
+  cursor: pointer;
+  color: #111;
+  display: none;
+}
+
+.imagelogo {
+  position: absolute;
+  height: auto;
+  left: 0px;
+  width: 75px;
+  margin-left: 15px;
+  padding: 5px;
+  /* cursor: pointer; */
+  /* display: none; */
+}
+
+@media (max-width: 798px) {
+  header {
+    padding: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  label {
+    display: block;
+    margin-right: 0px; /* Add margin to space it out from the logo */
+    z-index: 1000; /* Ensure it stays on top */
+  }
+
+  .imagelogo {
+    width: 60px; /* Adjust width to be smaller on smaller screens */
+    margin-left: 10px;
+    display: none;
+  }
+
+  header nav {
+    position: absolute;
+    left: -100%;
+    top: 100%;
+    right: 0;
+    width: 98%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    opacity: 0;
+    margin: 10px auto;
+  }
+
+  header nav a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 10px green;
+    border-radius: 10px;
+    margin-top: 30px;
+    font-size: 22px;
+  }
+}
+
+section {
+  padding: 6%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  text-align: center;
+  position: relative;
+}
+
+.content h1 {
+  font-size: 60px;
+  color: #fff;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.content p {
+  line-height: 1.4;
+  font-size: 17px;
+  color: black;
+  margin: 20px 30px;
+}
+section .content .btn {
+  background-color: #fff;
+  color: green;
+  transition: 0.3s ease;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
